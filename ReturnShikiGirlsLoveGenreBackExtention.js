@@ -47,11 +47,15 @@ function fetchAnimeInfo(id) {
   });
 }
 var anomeInfo = fetchAnimeInfo(getMALId());
-var entryInfo = document.querySelector('.b-entry-info');
-if (entryInfo) {
-  var genres = entryInfo.children[4].children[0].children[1];
-  if (genres) {
-      genres.innerHTML += '<a class="b-tag bubbled-processed" style="color: red;" data-predelay="350" href="https://myanimelist.net/anime/genre/26/Girls_Love"><span class="genre-en">Girls Love</span><span class="genre-ru">Юри</span></a>';
+var isGirlsLove = false;
+anomeInfo["genres"].forEach(genre => { if (genre["name"] === "Girls Love") isGirlsLove = true;});
+
+if (isGirlsLove) {
+  var entryInfo = document.querySelector('.b-entry-info');
+  if (entryInfo) {
+    var genres = entryInfo.children[4].children[0].children[1];
+    if (genres) {
+        genres.innerHTML += '<a class="b-tag bubbled-processed" style="color: red;" data-predelay="350" href="https://myanimelist.net/anime/genre/26/Girls_Love"><span class="genre-en">Girls Love</span><span class="genre-ru">Юри</span></a>';
+    }
   }
 }
-
