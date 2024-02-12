@@ -53,7 +53,5 @@ if (entryInfo) {
   if (genres) {
       genres.innerHTML += '<a class="b-tag bubbled-processed" style="color: red;" data-predelay="350" href="https://myanimelist.net/anime/genre/26/Girls_Love"><span class="genre-en">Girls Love</span><span class="genre-ru">Юри</span></a>';
   }
-
-
 }
 
