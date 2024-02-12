@@ -8,7 +8,7 @@
 // @match        *://shikimori.one/*
 // @match        *://shikimori.me/*
 // @icon         https://www.google.com/s2/favicons?domain=shikimori.me
-// @require      https://github.com/SergeevSergey99/ShikiExtentions/blob/main/ReturnShikiGenresBackExtention.js
+// @require      https://github.com/SergeevSergey99/ShikiExtentions/blob/main/ReturnShikiGirlsLoveGenreBackExtention.js
 // @license      MIT
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
