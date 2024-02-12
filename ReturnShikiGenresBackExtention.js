@@ -8,6 +8,7 @@
 // @match        *://shikimori.one/*
 // @match        *://shikimori.me/*
 // @icon         https://www.google.com/s2/favicons?domain=shikimori.me
+// @require      https://github.com/SergeevSergey99/ShikiExtentions/blob/main/ReturnShikiGenresBackExtention.js
 // @license      MIT
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
@@ -38,7 +39,6 @@ function fetchAnimeInfo(id) {
     },
     onload: function(response) {
       var result = JSON.parse(response.responseText);
-      console.log("json: " + response.responseText);
       return result;
     },
     onerror: function(error) {
@@ -46,15 +46,10 @@ function fetchAnimeInfo(id) {
     }
   });
 }
-console.log("INFO")
 var anomeInfo = fetchAnimeInfo(getMALId());
-// Пример использования querySelector для более гибкого доступа к элементу
 var entryInfo = document.querySelector('.b-entry-info');
 if (entryInfo) {
   var genres = entryInfo.children[4].children[0].children[1];
-  
-  console.log("ELEMENT " + genres)
-  // Пример изменения содержимого элемента
   if (genres) {
       genres.innerHTML += '<a class="b-tag bubbled-processed" style="color: red;" data-predelay="350" href="https://myanimelist.net/anime/genre/26/Girls_Love"><span class="genre-en">Girls Love</span><span class="genre-ru">Юри</span></a>';
   }
