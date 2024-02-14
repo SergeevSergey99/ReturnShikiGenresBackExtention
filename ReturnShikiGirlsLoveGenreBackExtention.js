@@ -10,6 +10,7 @@
 // @icon         https://www.google.com/s2/favicons?domain=shikimori.me
 // @license      MIT
 // @grant        GM_xmlhttpRequest
+// @connect      api.myanimelist.net
 // ==/UserScript==
 
 function getMALId() {
